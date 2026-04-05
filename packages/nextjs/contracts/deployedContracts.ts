@@ -4,6 +4,224 @@
  */
 import { GenericContractsDeclaration } from "~~/utils/scaffold-eth/contract";
 
-const deployedContracts = {} as const;
+const deployedContracts = {
+  31337: {
+    HydroLedgerRegistry: {
+      address: "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+      abi: [
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: true,
+              internalType: "uint256",
+              name: "id",
+              type: "uint256",
+            },
+            {
+              indexed: true,
+              internalType: "address",
+              name: "farm",
+              type: "address",
+            },
+            {
+              indexed: false,
+              internalType: "bytes32",
+              name: "reportHash",
+              type: "bytes32",
+            },
+            {
+              indexed: false,
+              internalType: "uint256",
+              name: "timestamp",
+              type: "uint256",
+            },
+            {
+              indexed: false,
+              internalType: "enum HydroLedgerRegistry.Status",
+              name: "status",
+              type: "uint8",
+            },
+          ],
+          name: "ReportSubmitted",
+          type: "event",
+        },
+        {
+          inputs: [
+            {
+              internalType: "uint256",
+              name: "_id",
+              type: "uint256",
+            },
+          ],
+          name: "getReport",
+          outputs: [
+            {
+              components: [
+                {
+                  internalType: "uint256",
+                  name: "id",
+                  type: "uint256",
+                },
+                {
+                  internalType: "address",
+                  name: "farm",
+                  type: "address",
+                },
+                {
+                  internalType: "bytes32",
+                  name: "reportHash",
+                  type: "bytes32",
+                },
+                {
+                  internalType: "uint256",
+                  name: "timestamp",
+                  type: "uint256",
+                },
+                {
+                  internalType: "enum HydroLedgerRegistry.Status",
+                  name: "status",
+                  type: "uint8",
+                },
+                {
+                  internalType: "string",
+                  name: "farmName",
+                  type: "string",
+                },
+                {
+                  internalType: "string",
+                  name: "region",
+                  type: "string",
+                },
+                {
+                  internalType: "string",
+                  name: "cropType",
+                  type: "string",
+                },
+                {
+                  internalType: "string",
+                  name: "reportingPeriod",
+                  type: "string",
+                },
+              ],
+              internalType: "struct HydroLedgerRegistry.Report",
+              name: "",
+              type: "tuple",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "reportCount",
+          outputs: [
+            {
+              internalType: "uint256",
+              name: "",
+              type: "uint256",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "uint256",
+              name: "",
+              type: "uint256",
+            },
+          ],
+          name: "reports",
+          outputs: [
+            {
+              internalType: "uint256",
+              name: "id",
+              type: "uint256",
+            },
+            {
+              internalType: "address",
+              name: "farm",
+              type: "address",
+            },
+            {
+              internalType: "bytes32",
+              name: "reportHash",
+              type: "bytes32",
+            },
+            {
+              internalType: "uint256",
+              name: "timestamp",
+              type: "uint256",
+            },
+            {
+              internalType: "enum HydroLedgerRegistry.Status",
+              name: "status",
+              type: "uint8",
+            },
+            {
+              internalType: "string",
+              name: "farmName",
+              type: "string",
+            },
+            {
+              internalType: "string",
+              name: "region",
+              type: "string",
+            },
+            {
+              internalType: "string",
+              name: "cropType",
+              type: "string",
+            },
+            {
+              internalType: "string",
+              name: "reportingPeriod",
+              type: "string",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "bytes32",
+              name: "_reportHash",
+              type: "bytes32",
+            },
+            {
+              internalType: "string",
+              name: "_farmName",
+              type: "string",
+            },
+            {
+              internalType: "string",
+              name: "_region",
+              type: "string",
+            },
+            {
+              internalType: "string",
+              name: "_cropType",
+              type: "string",
+            },
+            {
+              internalType: "string",
+              name: "_reportingPeriod",
+              type: "string",
+            },
+          ],
+          name: "submitReport",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+      ],
+      inheritedFunctions: {},
+      deployedOnBlock: 1,
+    },
+  },
+} as const;
 
 export default deployedContracts satisfies GenericContractsDeclaration;
