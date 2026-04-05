@@ -1,83 +1,85 @@
-# 🏗 Scaffold-ETH 2
+# 💧 HydroLedger Verified
 
-<h4 align="center">
-  <a href="https://docs.scaffoldeth.io">Documentation</a> |
-  <a href="https://scaffoldeth.io">Website</a>
-</h4>
+HydroLedger Verified is a blockchain-based solution for transparent agricultural water usage tracking and verification.
 
-🧪 An open-source, up-to-date toolkit for building decentralized applications (dapps) on the Ethereum blockchain. It's designed to make it easier for developers to create and deploy smart contracts and build user interfaces that interact with those contracts.
+Built during ETHGlobal Cannes 2026.
 
-> [!NOTE]
-> 🤖 Scaffold-ETH 2 is AI-ready! It has everything agents need to build on Ethereum. Check `.agents/`, `.claude/`, `.opencode` or `.cursor/` for more info.
+---
 
-⚙️ Built using NextJS, RainbowKit, Hardhat, Wagmi, Viem, and Typescript.
+## 🌱 Problem
 
-- ✅ **Contract Hot Reload**: Your frontend auto-adapts to your smart contract as you edit it.
-- 🪝 **[Custom hooks](https://docs.scaffoldeth.io/hooks/)**: Collection of React hooks wrapper around [wagmi](https://wagmi.sh/) to simplify interactions with smart contracts with typescript autocompletion.
-- 🧱 [**Components**](https://docs.scaffoldeth.io/components/): Collection of common web3 components to quickly build your frontend.
-- 🔥 **Burner Wallet & Local Faucet**: Quickly test your application with a burner wallet and local faucet.
-- 🔐 **Integration with Wallet Providers**: Connect to different wallet providers and interact with the Ethereum network.
+Agricultural water usage data is often:
+- not transparent
+- hard to verify
+- prone to manipulation
 
-![Debug Contracts tab](https://github.com/scaffold-eth/scaffold-eth-2/assets/55535804/b237af0c-5027-4849-a5c1-2e31495cccb1)
+This creates challenges in sustainability, accountability, and trust.
 
-## Requirements
+---
 
-Before you begin, you need to install the following tools:
+## 🚀 Solution
 
-- [Node (>= v20.18.3)](https://nodejs.org/en/download/)
-- Yarn ([v1](https://classic.yarnpkg.com/en/docs/install/) or [v2+](https://yarnpkg.com/getting-started/install))
-- [Git](https://git-scm.com/downloads)
+HydroLedger Verified allows users to:
 
-## Quickstart
+- Submit irrigation data (farm, region, crop type, water usage)
+- Generate a unique hash of the data
+- Store the hash on-chain
+- Verify records through a dashboard
 
-To get started with Scaffold-ETH 2, follow the steps below:
+This ensures data integrity and transparency.
 
-1. Install dependencies if it was skipped in CLI:
+---
 
-```
-cd my-dapp-example
-yarn install
-```
+## ⚙️ How It Works
 
-2. Run a local network in the first terminal:
+1. User fills a form with irrigation data  
+2. Data is converted into a hash  
+3. Hash is stored on blockchain  
+4. Dashboard displays submitted reports  
 
-```
-yarn chain
-```
+---
 
-This command starts a local Ethereum network using Hardhat. The network runs on your local machine and can be used for testing and development. You can customize the network configuration in `packages/hardhat/hardhat.config.ts`.
+## 🛠 Tech Stack
 
-3. On a second terminal, deploy the test contract:
+- Next.js  
+- React  
+- Scaffold-ETH 2  
+- Solidity  
+- Hardhat  
+- Wagmi / Viem
+  
+---
 
-```
-yarn deploy
-```
+## 🎥 Demo
 
-This command deploys a test smart contract to the local network. The contract is located in `packages/hardhat/contracts` and can be modified to suit your needs. The `yarn deploy` command uses the deploy script located in `packages/hardhat/deploy` to deploy the contract to the network. You can also customize the deploy script.
+https://drive.google.com/file/d/18yi8fdB8dKSucPXgb-oYA7SJ9QRDerqb/view
 
-4. On a third terminal, start your NextJS app:
+---
 
-```
-yarn start
-```
+## 📦 Project Structure
 
-Visit your app on: `http://localhost:3000`. You can interact with your smart contract using the `Debug Contracts` page. You can tweak the app config in `packages/nextjs/scaffold.config.ts`.
+- `packages/hardhat` → Smart contracts  
+- `packages/nextjs` → Frontend  
 
-Run smart contract test with `yarn hardhat:test`
+---
 
-- Edit your smart contracts in `packages/hardhat/contracts`
-- Edit your frontend homepage at `packages/nextjs/app/page.tsx`. For guidance on [routing](https://nextjs.org/docs/app/building-your-application/routing/defining-routes) and configuring [pages/layouts](https://nextjs.org/docs/app/building-your-application/routing/pages-and-layouts) checkout the Next.js documentation.
-- Edit your deployment scripts in `packages/hardhat/deploy`
+## 🔮 Future Work
 
+- IoT integration for real-time data  
+- AI-based irrigation optimization  
+- Deployment on testnet/mainnet  
 
-## Documentation
+---
 
-Visit our [docs](https://docs.scaffoldeth.io) to learn how to start building with Scaffold-ETH 2.
+## 🏆 Hackathon
 
-To know more about its features, check out our [website](https://scaffoldeth.io).
+ETHGlobal Cannes 2026
 
-## Contributing to Scaffold-ETH 2
+---
 
-We welcome contributions to Scaffold-ETH 2!
+## 👩‍💻 Author
 
-Please see [CONTRIBUTING.MD](https://github.com/scaffold-eth/scaffold-eth-2/blob/main/CONTRIBUTING.md) for more information and guidelines for contributing to Scaffold-ETH 2.
+Hilaria Jesus  
+[LinkedIn](https://www.linkedin.com/in/hilaria-jesus)
+
+---
